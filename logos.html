@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avenor Logo Options</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@700;900&family=Bebas+Neue&family=Orbitron:wght@700;900&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #050508; font-family: 'Inter', sans-serif; color: white; padding: 40px 20px; }
+  h1 { text-align: center; color: #a855f7; font-size: 1.2rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 60px; opacity: 0.6; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+  .card { background: #0d0d14; border: 1px solid rgba(168,85,247,0.15); border-radius: 20px; padding: 60px 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; min-height: 200px; transition: border-color 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }
+  .card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(168,85,247,0.08) 0%, transparent 60%); pointer-events: none; }
+  .card:hover { border-color: rgba(168,85,247,0.5); box-shadow: 0 0 40px rgba(168,85,247,0.12); }
+  .label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(168,85,247,0.4); }
+  .tag { position: absolute; top: 16px; right: 16px; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; background: rgba(168,85,247,0.12); color: rgba(168,85,247,0.7); padding: 4px 10px; border-radius: 100px; border: 1px solid rgba(168,85,247,0.2); }
+
+  /* ===== WORDMARK LOGOS ===== */
+
+  /* WM1 - Bold Violet + Lightning */
+  .wm1 { font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 3.8rem; letter-spacing: -0.02em; color: #a855f7; text-shadow: 0 0 20px rgba(168,85,247,0.8), 0 0 60px rgba(168,85,247,0.4), 0 0 120px rgba(168,85,247,0.2); }
+  .wm1 .bolt { color: #c084fc; display: inline-block; transform: scaleX(0.7); }
+
+  /* WM2 - Neon Tube outline style */
+  .wm2 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 2.8rem; letter-spacing: 0.12em; color: transparent; -webkit-text-stroke: 2px #a855f7; text-shadow: 0 0 15px rgba(168,85,247,0.9), 0 0 40px rgba(168,85,247,0.5), 0 0 80px rgba(168,85,247,0.2); }
+
+  /* WM3 - Split color */
+  .wm3 { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; letter-spacing: 0.08em; line-height: 1; }
+  .wm3 .v1 { color: #a855f7; text-shadow: 0 0 20px rgba(168,85,247,0.9), 0 0 50px rgba(168,85,247,0.5); }
+  .wm3 .v2 { color: rgba(255,255,255,0.95); }
+
+  /* WM4 - Gradient slim */
+  .wm4 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 3.5rem; letter-spacing: 0.05em; background: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #f0abfc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; filter: drop-shadow(0 0 20px rgba(168,85,247,0.6)); }
+
+  /* WM5 - Rajdhani cyber angular */
+  .wm5 { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 4.5rem; letter-spacing: 0.15em; color: #a855f7; text-shadow: 0 0 10px rgba(168,85,247,1), 0 0 30px rgba(168,85,247,0.7), 0 0 80px rgba(168,85,247,0.3); position: relative; }
+  .wm5::after { content: 'AVENOR'; position: absolute; left: 0; top: 0; color: #f0abfc; clip-path: inset(50% 0 0 0); opacity: 0.7; }
+
+  /* ===== ICON LOGOS ===== */
+
+  /* ICON 1 - Triangle A */
+  .icon1 svg { filter: drop-shadow(0 0 8px rgba(168,85,247,0.9)) drop-shadow(0 0 20px rgba(168,85,247,0.5)) drop-shadow(0 0 40px rgba(168,85,247,0.3)); }
+
+  /* ICON 2 - Hexagon bolt */
+  .icon2 svg { filter: drop-shadow(0 0 8px rgba(168,85,247,0.9)) drop-shadow(0 0 20px rgba(168,85,247,0.5)); }
+
+  /* ICON 3 - Diamond chevron */
+  .icon3 svg { filter: drop-shadow(0 0 8px rgba(168,85,247,0.9)) drop-shadow(0 0 20px rgba(168,85,247,0.5)); }
+
+  /* ICON 4 - Circle cursor */
+  .icon4 svg { filter: drop-shadow(0 0 10px rgba(168,85,247,1)) drop-shadow(0 0 25px rgba(168,85,247,0.6)); }
+
+  /* ICON 5 - Three lines */
+  .icon5 svg { filter: drop-shadow(0 0 8px rgba(168,85,247,0.9)) drop-shadow(0 0 20px rgba(168,85,247,0.5)); }
+
+  @keyframes neonPulse {
+    0%, 100% { filter: drop-shadow(0 0 6px rgba(168,85,247,0.7)) drop-shadow(0 0 15px rgba(168,85,247,0.4)); }
+    50% { filter: drop-shadow(0 0 14px rgba(192,132,252,1)) drop-shadow(0 0 35px rgba(168,85,247,0.7)) drop-shadow(0 0 60px rgba(168,85,247,0.3)); }
+  }
+  @keyframes textPulse {
+    0%, 100% { text-shadow: 0 0 15px rgba(168,85,247,0.7), 0 0 40px rgba(168,85,247,0.4); }
+    50% { text-shadow: 0 0 25px rgba(192,132,252,1), 0 0 60px rgba(168,85,247,0.7), 0 0 100px rgba(168,85,247,0.3); }
+  }
+  .wm1 { animation: textPulse 3s ease-in-out infinite; }
+  .wm2 { animation: textPulse 3s ease-in-out infinite; }
+  .wm5 { animation: textPulse 2.5s ease-in-out infinite; }
+  .icon1 svg, .icon2 svg, .icon3 svg, .icon4 svg, .icon5 svg { animation: neonPulse 3s ease-in-out infinite; }
+</style>
+</head>
+<body>
+<h1>✦ Avenor — Logo Options ✦</h1>
+<div class="grid">
+
+  <!-- WM1 — Bold Violet + Lightning Bolt V -->
+  <div class="card">
+    <div class="tag">Wordmark 1</div>
+    <div class="wm1">A<span class="bolt">⚡</span>ENOR</div>
+    <div class="label">Bold glow — lightning bolt V</div>
+  </div>
+
+  <!-- WM2 — Neon Outline / Orbitron -->
+  <div class="card">
+    <div class="tag">Wordmark 2</div>
+    <div class="wm2">AVENOR</div>
+    <div class="label">Neon tube outline — Orbitron</div>
+  </div>
+
+  <!-- WM3 — Split Color Bebas -->
+  <div class="card">
+    <div class="tag">Wordmark 3</div>
+    <div class="wm3"><span class="v1">AVE</span><span class="v2">NOR</span></div>
+    <div class="label">Split color — violet & white</div>
+  </div>
+
+  <!-- WM4 — Purple-Pink Gradient -->
+  <div class="card">
+    <div class="tag">Wordmark 4</div>
+    <div class="wm4">Avenor</div>
+    <div class="label">Violet → pink gradient text</div>
+  </div>
+
+  <!-- WM5 — Rajdhani Cyber -->
+  <div class="card">
+    <div class="tag">Wordmark 5</div>
+    <div class="wm5">AVENOR</div>
+    <div class="label">Cyber angular — Rajdhani</div>
+  </div>
+
+  <!-- ICON 1 — Triangle A -->
+  <div class="card">
+    <div class="tag">Icon 1</div>
+    <div class="icon1">
+      <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+        <polyline points="45,8 82,75 8,75" stroke="#a855f7" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+        <line x1="28" y1="55" x2="62" y2="55" stroke="#a855f7" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="label">Geometric A — triangle mark</div>
+  </div>
+
+  <!-- ICON 2 — Hexagon + Bolt -->
+  <div class="card">
+    <div class="tag">Icon 2</div>
+    <div class="icon2">
+      <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+        <polygon points="45,5 80,25 80,65 45,85 10,65 10,25" stroke="#a855f7" stroke-width="4" fill="none" stroke-linejoin="round"/>
+        <polyline points="50,25 38,47 52,47 40,68" stroke="#c084fc" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="label">Hexagon + lightning bolt</div>
+  </div>
+
+  <!-- ICON 3 — Double Chevron Up -->
+  <div class="card">
+    <div class="tag">Icon 3</div>
+    <div class="icon3">
+      <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+        <polyline points="15,60 45,28 75,60" stroke="#a855f7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <polyline points="25,75 45,52 65,75" stroke="#c084fc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="label">Double chevron — upward growth</div>
+  </div>
+
+  <!-- ICON 4 — Circle + Arrow Cursor -->
+  <div class="card">
+    <div class="tag">Icon 4</div>
+    <div class="icon4">
+      <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+        <circle cx="45" cy="45" r="36" stroke="#a855f7" stroke-width="4"/>
+        <line x1="45" y1="62" x2="45" y2="28" stroke="#c084fc" stroke-width="4" stroke-linecap="round"/>
+        <polyline points="32,40 45,26 58,40" stroke="#c084fc" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="label">Circle + upward arrow</div>
+  </div>
+
+  <!-- ICON 5 — Three parallel diagonal slashes -->
+  <div class="card">
+    <div class="tag">Icon 5</div>
+    <div class="icon5">
+      <svg width="90" height="90" viewBox="0 0 90 90" fill="none">
+        <line x1="20" y1="75" x2="45" y2="15" stroke="#a855f7" stroke-width="8" stroke-linecap="round"/>
+        <line x1="38" y1="75" x2="63" y2="15" stroke="#c084fc" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+        <line x1="56" y1="75" x2="81" y2="15" stroke="#a855f7" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+      </svg>
+    </div>
+    <div class="label">Triple slash — speed mark</div>
+  </div>
+
+</div>
+
+<p style="text-align:center; margin-top:50px; color:rgba(168,85,247,0.3); font-size:0.8rem; letter-spacing:0.1em;">Reply with the number (1–10) and I'll add it to the website</p>
+</body>
+</html>

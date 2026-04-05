@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#080a0f"/>
+  <path d="M32 12 L50 52 L14 52" stroke="#a855f7" stroke-width="6" fill="none" stroke-linejoin="round" filter="url(#neon-glow)"/>
+  <line x1="24" y1="38" x2="40" y2="38" stroke="#a855f7" stroke-width="6" stroke-linecap="round" filter="url(#neon-glow)"/>
+</svg>
