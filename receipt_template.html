@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt | AVENOR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7B61FF;
+            --primary-light: #A78BFA;
+            --text-dark: #111827;
+            --text-gray: #6B7280;
+            --text-light: #9CA3AF;
+            --bg-white: #FFFFFF;
+            --bg-gray: #F9FAFB;
+            --border: #E5E7EB;
+            --green: #059669;
+            --green-bg: #ECFDF5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            line-height: 1.5;
+            padding: 60px 0;
+        }
+
+        .receipt-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 60px;
+        }
+
+        .brand-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-dark);
+        }
+
+        .receipt-meta {
+            text-align: right;
+        }
+
+        .receipt-id {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-gray);
+            margin-bottom: 4px;
+        }
+
+        .receipt-date {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            background: var(--green-bg);
+            color: var(--green);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1px solid rgba(5, 150, 105, 0.1);
+            margin-bottom: 30px;
+        }
+
+        /* Amount Section */
+        .amount-section {
+            margin-bottom: 50px;
+        }
+
+        .label-small {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-gray);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .amount-value {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        /* Details Grid */
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        .detail-item {
+            margin-bottom: 24px;
+        }
+
+        .detail-item label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 6px;
+        }
+
+        .detail-item p {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* Description Box */
+        .description-box {
+            margin-bottom: 50px;
+        }
+
+        .description-text {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        /* Upcoming Payments Section */
+        .upcoming-section {
+            background: var(--bg-gray);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid var(--border);
+        }
+
+        .upcoming-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .upcoming-list {
+            list-style: none;
+        }
+
+        .upcoming-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+
+        .upcoming-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .upcoming-date {
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .upcoming-amount {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 40px;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-gray);
+        }
+
+        /* Print Settings */
+        @media print {
+            body { 
+                background: white; 
+                padding: 0; 
+            }
+            .receipt-wrapper {
+                box-shadow: none;
+                border: none;
+                max-width: 100%;
+                width: 100%;
+                padding: 40px;
+            }
+            .amount-value {
+                -webkit-text-fill-color: var(--primary);
+                background: none;
+                color: var(--primary);
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="receipt-wrapper">
+        <header class="header">
+            <h1 class="brand-name">AVENOR</h1>
+            <div class="receipt-meta">
+                <div class="receipt-id">Receipt ID: AV-2026-0407</div>
+                <div class="receipt-date">7 April 2026</div>
+            </div>
+        </header>
+
+        <section class="status-section">
+            <div class="status-badge">
+                Payment Received
+            </div>
+        </section>
+
+        <section class="amount-section">
+            <div class="label-small">Amount Paid</div>
+            <div class="amount-value">€30</div>
+        </section>
+
+        <section class="details-grid">
+            <div class="details-left">
+                <div class="detail-item">
+                    <label>Paid By</label>
+                    <p>B Collins Plumbing</p>
+                </div>
+                <div class="detail-item">
+                    <label>Paid To</label>
+                    <p>Sahid Akhtar</p>
+                </div>
+                <div class="detail-item">
+                    <label>Payment Method</label>
+                    <p>Payoneer</p>
+                </div>
+            </div>
+            <div class="details-right">
+                <div class="detail-item">
+                    <label>Billing Period</label>
+                    <p>7 April 2026 – 7 May 2026</p>
+                </div>
+                <div class="detail-item">
+                    <label>Type</label>
+                    <p>Service Agreement (5-Month Plan)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="description-box">
+            <p class="description-text">
+                This payment is part of a 5-month agreement totaling €150. 
+                Client is paying €30 per month.
+            </p>
+        </section>
+
+        <section class="upcoming-section">
+            <h2 class="upcoming-title">Upcoming Payments</h2>
+            <ul class="upcoming-list">
+                <li class="upcoming-row">
+                    <span class="upcoming-date">7 May 2026</span>
+                    <span class="upcoming-amount">€30</span>
+                </li>
+                <li class="upcoming-row">
+                    <span class="upcoming-date">7 June 2026</span>
+                    <span class="upcoming-amount">€30</span>
+                </li>
+                <li class="upcoming-row">
+                    <span class="upcoming-date">7 July 2026</span>
+                    <span class="upcoming-amount">€30</span>
+                </li>
+                <li class="upcoming-row">
+                    <span class="upcoming-date">7 August 2026</span>
+                    <span class="upcoming-amount">€30</span>
+                </li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <p class="footer-text">Thank you for your business.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
