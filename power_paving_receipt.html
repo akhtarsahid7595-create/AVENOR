@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt | Power Paving and Landscaping</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f9fafb;
+            --surface: #ffffff;
+            --border: #e5e7eb;
+            --text-primary: #000000;
+            --text-secondary: #000000;
+            --accent: #7c3aed; /* AVENOR Purple */
+            --radius: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* Receipt Card */
+        .receipt-container {
+            width: 100%;
+            max-width: 600px;
+            background: var(--surface);
+            border: 2px solid #000;
+            border-radius: var(--radius);
+            padding: 60px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 60px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 30px;
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            line-height: 1;
+            color: #000;
+        }
+
+        .logo-ave { color: var(--accent); }
+
+        .receipt-meta {
+            text-align: right;
+        }
+
+        .receipt-id {
+            font-size: 0.85rem;
+            color: #000;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .date {
+            font-size: 1rem;
+            color: #000;
+            margin-top: 4px;
+            font-weight: 700;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 40px;
+        }
+
+        /* Amount Section */
+        .amount-section {
+            margin-bottom: 50px;
+        }
+
+        .amount-label {
+            font-size: 0.9rem;
+            color: #000;
+            margin-bottom: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .amount-value {
+            font-size: 5rem;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            color: #000;
+            line-height: 1;
+        }
+
+        /* info Grid */
+        .details-grid {
+            border-top: 2px solid #000;
+            padding-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .detail-item label {
+            display: block;
+            font-size: 0.8rem;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+            font-weight: 900;
+        }
+
+        .detail-item span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #000;
+        }
+
+        /* Terms Box */
+        .terms-box {
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+
+        .terms-title {
+            font-size: 0.9rem;
+            font-weight: 900;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .terms-content {
+            font-size: 1rem;
+            color: #000;
+            line-height: 1.6;
+            font-weight: 600;
+        }
+
+        .terms-content strong {
+            font-weight: 900;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            border-top: 2px solid #000;
+            padding-top: 40px;
+        }
+
+        .footer-text {
+            font-size: 1rem;
+            color: #000;
+            line-height: 1.6;
+            font-weight: 700;
+        }
+
+        /* Print Override */
+        @media print {
+            body { background: white; padding: 0; }
+            .receipt-container {
+                box-shadow: none;
+                border: 2px solid #000;
+                width: 100%;
+                max-width: 100%;
+                padding: 40px;
+                margin: 0;
+                border-radius: 0;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="receipt-container">
+        <div class="header">
+            <div class="logo">
+                <span class="logo-ave">AVE</span>NOR
+            </div>
+            <div class="receipt-meta">
+                <div class="receipt-id">ID: AV-PP-2026-0508</div>
+                <div class="date">08 May 2026</div>
+            </div>
+        </div>
+
+        <div class="status-badge">
+            Payment Received
+        </div>
+
+        <div class="amount-section">
+            <div class="amount-label">Amount Paid</div>
+            <div class="amount-value">$29.00</div>
+        </div>
+
+        <div class="details-grid">
+            <div class="detail-item">
+                <label>Paid To</label>
+                <span>Sahid Akhtar (AVENOR)</span>
+            </div>
+            <div class="detail-item">
+                <label>Billed To</label>
+                <span>Power Paving and Landscaping (Pat Power)</span>
+            </div>
+            <div class="detail-item">
+                <label>Payment Method</label>
+                <span>Payoneer</span>
+            </div>
+            <div class="detail-item">
+                <label>Payment ID</label>
+                <span>981436070</span>
+            </div>
+        </div>
+
+        <div class="terms-box">
+            <div class="terms-title">
+                Payment Terms
+            </div>
+            <p class="terms-content">
+                Next payment is due on <strong>08 June 2026</strong>. Please note that payments are <strong>not automatic</strong>. Monthly manual renewal is required to maintain active service.
+            </p>
+        </div>
+
+        <div class="footer">
+            <p class="footer-text">
+                Thank you for your business. For any questions,<br>
+                please contact via WhatsApp <strong>+91 7595977300</strong>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

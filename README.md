@@ -17,5 +17,5 @@
 ## 💼 Author
 Built by **Sahid Akhtar** — *Founder of Avenor*.
 
-## 🔗 Live Site
-[View Avenor Live](https://akhtarsahid7595-create.github.io/AVENOR/) *(Wait, the user is pushing, probably heading for GitHub Pages or similar).*
+## 🔗 Official Site
+[https://avenor.site](https://avenor.site)
