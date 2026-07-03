@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, initial-scale=1.0">
+    <title>Social Post</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1115;
+            --surface: #1a1d24;
+            --accent: #6366f1;
+            --accent-2: #8b5cf6;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border: #2dd4bf;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            width: 1080px;
+            height: 1080px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px;
+        }
+
+        /* Glowing Orbs for brand feel */
+        .glow-1 {
+            position: absolute;
+            top: -10%; left: -10%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(99,102,241,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .glow-2 {
+            position: absolute;
+            bottom: -20%; right: -10%;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        /* Logo */
+        .logo-container {
+            position: absolute;
+            top: 60px;
+            left: 80px;
+        }
+        .logo-wm { font-size: 2.5rem; font-weight: 800; letter-spacing: 2px; }
+        .logo-ave { color: #fff; }
+        .logo-nor { color: #2dd4bf; }
+
+        /* Typography */
+        .headline {
+            font-size: 4.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 50px;
+            max-width: 950px;
+            z-index: 10;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Comparison Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            z-index: 10;
+            margin-bottom: 60px;
+        }
+        
+        .box {
+            background: var(--surface);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .box.bad {
+            border-top: 4px solid var(--danger);
+        }
+        .box.good {
+            border-top: 4px solid var(--success);
+            background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, var(--surface) 100%);
+        }
+
+        .box-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .bad .box-title { color: var(--danger); }
+        .good .box-title { color: var(--success); }
+        
+        .list-item {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+        .list-item:last-child { margin-bottom: 0; }
+        .list-icon {
+            margin-right: 15px;
+            font-size: 1.8rem;
+        }
+        .bad .list-icon { color: var(--danger); }
+        .good .list-icon { color: var(--success); }
+        .good .list-item { color: var(--text-primary); font-weight: 600; }
+
+        /* CTA */
+        .cta-container {
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(139,92,246,0.1));
+            border: 1px solid rgba(99,102,241,0.3);
+            border-radius: 20px;
+            padding: 30px 50px;
+            margin-top: 20px;
+        }
+        .cta-text {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+        .cta-action {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            background: #fff;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+
+        .social-handle {
+            position: absolute;
+            bottom: 60px;
+            right: 80px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+
+    <div class="logo-container">
+        <span class="logo-wm"><span class="logo-ave">AVE</span><span class="logo-nor">NOR.</span></span>
+    </div>
+
+    <h1 class="headline">Still Sending Customers to Facebook?<br><span class="gradient-text">You're probably losing leads.</span></h1>
+
+    <div class="grid">
+        <div class="box bad">
+            <h2 class="box-title">Facebook Page</h2>
+            <div class="list-item"><span class="list-icon">❌</span> No Google visibility</div>
+            <div class="list-item"><span class="list-icon">❌</span> Less trust</div>
+            <div class="list-item"><span class="list-icon">❌</span> Hard to stand out</div>
+        </div>
+        <div class="box good">
+            <h2 class="box-title">Professional Website</h2>
+            <div class="list-item"><span class="list-icon">✅</span> Works 24/7</div>
+            <div class="list-item"><span class="list-icon">✅</span> Gets found on Google</div>
+            <div class="list-item"><span class="list-icon">✅</span> Turns visitors into enquiries</div>
+        </div>
+    </div>
+
+    <div class="cta-container">
+        <div class="cta-text">FREE Homepage Demo</div>
+        <div class="cta-action">DM "WEBSITE"</div>
+    </div>
+
+    <div class="social-handle">@avenorsite</div>
+</body>
+</html>
