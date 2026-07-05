@@ -748,6 +748,17 @@ h1, h2, h3 {
   transition: all 350ms cubic-bezier(.22,1,.36,1);
   position: relative;
   z-index: 2;
+  overflow: hidden;
+}
+
+.p-logo-img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  /* Strip white bg, convert to monochrome, boost brightness, and tint violet */
+  filter: invert(1) grayscale(1) brightness(1.5) contrast(1.5) sepia(1) hue-rotate(220deg) saturate(3);
+  transition: all 350ms ease;
 }
 
 .p-logo-col:hover {
@@ -759,6 +770,9 @@ h1, h2, h3 {
 }
 .p-logo-col:hover svg {
   stroke: #fff;
+}
+.p-logo-col:hover .p-logo-img {
+  filter: invert(1) grayscale(1) brightness(2.5) contrast(1.5) sepia(1) hue-rotate(220deg) saturate(4);
 }
 
 .p-logo-text {
