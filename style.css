@@ -654,43 +654,6 @@ h1, h2, h3 {
 .p3 { top: 20%; right: 10%; animation: float 6s infinite ease-in-out reverse; }
 .p4 { bottom: 10%; left: 10%; animation: float 4s infinite ease-in-out; }
 
-/* 3D Platform */
-.mockup-platform-3d {
-  position: absolute;
-  bottom: -80px;
-  left: 50%;
-  transform: translateX(-50%) rotateX(75deg) translateZ(-40px);
-  width: 140%;
-  height: 350px;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-.platform-top {
-  position: absolute;
-  width: 100%; height: 100%;
-  background: rgba(20, 20, 30, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 0 60px rgba(0,0,0,0.9);
-}
-.platform-edge {
-  position: absolute;
-  bottom: -15px;
-  width: 100%;
-  height: 15px;
-  background: linear-gradient(to right, #A855F7, #3b82f6, #A855F7);
-  transform: rotateX(-90deg);
-  transform-origin: top;
-  box-shadow: 0 10px 40px #A855F7, 0 15px 60px #3b82f6;
-}
-.platform-glow {
-  position: absolute;
-  bottom: -40px;
-  width: 100%;
-  height: 150px;
-  background: #A855F7;
-  filter: blur(80px);
-  opacity: 0.6;
-}
 
 /* Glass Cards */
 .glass-card {
