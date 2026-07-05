@@ -653,20 +653,23 @@ h1, h2, h3 {
 .card-title { font-size: 36px; font-weight: 700; color: #fff; line-height: 1; letter-spacing: -1px;}
 .card-subtitle { font-size: 15px; font-weight: 500; color: #fff; }
 .card-subtext { font-size: 13px; color: var(--text-muted); display: block; margin-top: 6px;}
-.card-icon-title { font-size: 15px; font-weight: 500; margin-bottom: 6px; color: #fff;}
-.stars { font-size: 14px; margin-bottom: 4px; letter-spacing: 2px;}
+.card-icon-title { font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #fff; opacity: 0.9;}
+.stars { display: flex; gap: 2px; margin-bottom: 6px;}
+.card-val { font-size: 36px; font-weight: 700; color: #fff; line-height: 1; letter-spacing: -1px; margin-bottom: 4px;}
+.card-label-row { display: flex; align-items: center; gap: 6px; }
 
 .card-top-right { top: -20px; right: -40px; }
 .card-left { top: 40%; left: -60px; }
 .card-bottom-left { bottom: 20px; left: -20px; }
 .card-bottom-right { bottom: -20px; right: -20px; }
 
-.card-progress { display: flex; align-items: center; gap: 12px; margin-top: 8px;}
+.card-progress { display: flex; align-items: center; gap: 12px; margin-top: 12px;}
 .circular-chart { width: 50px; height: 50px; }
-.circle-bg { fill: none; stroke: rgba(255,255,255,0.1); stroke-width: 3; }
-.circle { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; }
+.circle-bg { fill: none; stroke: rgba(255,255,255,0.1); stroke-width: 2.5; }
+.circle { fill: none; stroke: url(#circle-grad); stroke-width: 2.5; stroke-linecap: round; }
 .percentage { font-size: 24px; font-weight: 700; color:#fff;}
 .percentage .small { font-size: 12px; color: var(--text-muted); font-weight: 400;}
+.smooth-chart { width: 100%; height: auto; margin-top: 8px;}
 
 .float-1 { animation: float 6s ease-in-out infinite; }
 .float-2 { animation: float 7s ease-in-out infinite 1s; }
