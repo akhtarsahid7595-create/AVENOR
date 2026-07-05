@@ -403,7 +403,7 @@ h1, h2, h3 {
   .nav { padding: 12px 20px; }
   .hero-heading { font-size: 40px; }
   .hero-sub { font-size: 16px; margin-bottom: 32px; }
-  .hero-split { padding: 140px 0 60px; }
+  .hero-split { padding: 100px 0 60px; }
 }
 
 /* ===== HERO SPLIT ===== */
@@ -818,7 +818,7 @@ h1, h2, h3 {
   .hero-split-container {
     grid-template-columns: 1fr;
     gap: 80px;
-    padding-top: 40px;
+    padding-top: 10px;
   }
   .hero-content-right { padding-top: 0; }
   .hero-heading { font-size: 48px; }
