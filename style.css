@@ -403,7 +403,11 @@ h1, h2, h3 {
   .nav { padding: 12px 20px; }
   .hero-heading { font-size: 40px; }
   .hero-sub { font-size: 16px; margin-bottom: 32px; }
-  .hero-split { padding: 100px 0 60px; }
+  .hero-split { 
+    padding: 120px 0 60px; 
+    align-items: flex-start;
+    min-height: auto;
+  }
 }
 
 /* ===== HERO SPLIT ===== */
@@ -815,6 +819,11 @@ h1, h2, h3 {
 }
 
 @media (max-width: 992px) {
+  .hero-split {
+    align-items: flex-start;
+    min-height: auto;
+    padding: 140px 0 80px;
+  }
   .hero-split-container {
     grid-template-columns: 1fr;
     gap: 80px;
