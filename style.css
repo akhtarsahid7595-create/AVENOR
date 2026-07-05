@@ -621,15 +621,75 @@ h1, h2, h3 {
   box-shadow: 0 30px 60px rgba(0,0,0,0.6);
 }
 
-.mockup-platform {
+.hero-bg-sphere {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, #7C3AED 0%, #3b82f6 100%);
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.5;
+  z-index: -1;
+  animation: pulseGlow 4s ease-in-out infinite alternate;
+}
+@keyframes pulseGlow {
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.4; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.6; }
+}
+
+.mockup-particles {
+  position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; pointer-events: none;
+}
+.m-particle {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff, 0 0 20px var(--accent);
+  opacity: 0.5;
+}
+.p1 { top: 10%; left: 20%; animation: float 5s infinite ease-in-out; }
+.p2 { top: 80%; left: 80%; animation: float 7s infinite ease-in-out; }
+.p3 { top: 20%; right: 10%; animation: float 6s infinite ease-in-out reverse; }
+.p4 { bottom: 10%; left: 10%; animation: float 4s infinite ease-in-out; }
+
+/* 3D Platform */
+.mockup-platform-3d {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%) rotateX(75deg) translateZ(-40px);
+  width: 140%;
+  height: 350px;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+.platform-top {
+  position: absolute;
+  width: 100%; height: 100%;
+  background: rgba(20, 20, 30, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 60px rgba(0,0,0,0.9);
+}
+.platform-edge {
+  position: absolute;
+  bottom: -15px;
+  width: 100%;
+  height: 15px;
+  background: linear-gradient(to right, #A855F7, #3b82f6, #A855F7);
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  box-shadow: 0 10px 40px #A855F7, 0 15px 60px #3b82f6;
+}
+.platform-glow {
   position: absolute;
   bottom: -40px;
-  left: -10%;
-  width: 120%;
-  height: 80px;
-  background: radial-gradient(ellipse at center, rgba(124,58,237,0.4) 0%, transparent 70%);
-  transform: rotateX(80deg);
-  filter: blur(20px);
+  width: 100%;
+  height: 150px;
+  background: #A855F7;
+  filter: blur(80px);
+  opacity: 0.6;
 }
 
 /* Glass Cards */
