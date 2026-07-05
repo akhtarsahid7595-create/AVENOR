@@ -94,6 +94,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ===== MOBILE MENU TOGGLE =====
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if(mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
     // ===== REVEAL ON SCROLL =====
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
