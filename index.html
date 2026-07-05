@@ -22,7 +22,7 @@
     <meta property="twitter:image" content="https://avenor.site/assets/og-image.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
@@ -86,32 +86,120 @@
     </div>
 
     <!-- ===== HERO ===== -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-gradient"></div>
-        <div class="hero-content">
-            <div class="hero-badge reveal-up delay-0">
-                <span class="badge-dot"></span>
-                Available for new projects
-            </div>
-            <h1 class="hero-heading reveal-up delay-1">
-                Websites That Turn<br>
-                <span class="gradient-text">Clicks Into Customers</span>
-            </h1>
-            <p class="hero-sub reveal-up delay-2">
-                We build premium, high-converting websites for local service businesses and online brands — designed to generate real results.
-            </p>
-            <div class="hero-ctas reveal-up delay-3">
-                <a href="#work" class="btn btn-primary">View Our Work</a>
-                <a href="https://wa.me/917595977300" class="btn btn-outline">Get Free Demo →</a>
-            </div>
-            <div class="trust-badges reveal-up delay-4">
-                <div class="trust-badge"><span>✦</span> No upfront payment</div>
-                <div class="trust-badge"><span>✦</span> Free demo first</div>
-                <div class="trust-badge"><span>✦</span> Built for results</div>
-            </div>
+    <section class="hero-split" id="hero">
+        <div class="hero-bg-animated">
+            <div class="radial-glow glow-1"></div>
+            <div class="radial-glow glow-2"></div>
+            <div class="grid-lines"></div>
+            <div class="particles"></div>
         </div>
-        <div class="hero-scroll-indicator">
-            <div class="scroll-line"></div>
+
+        <div class="container hero-split-container">
+            <!-- Left Side Content -->
+            <div class="hero-content-left reveal-up delay-1">
+                <div class="hero-badge">
+                    <span class="badge-dot-green"></span>
+                    Trusted by 20+ Businesses
+                </div>
+                
+                <h1 class="hero-heading">
+                    Websites That Turn<br>
+                    <span class="gradient-text-purple">Visitors Into</span><br>
+                    <span class="text-purple">Customers</span>
+                </h1>
+                
+                <p class="hero-sub">
+                    We design and build high-converting websites for local businesses and online brands that generate real results.
+                </p>
+                
+                <div class="hero-ctas">
+                    <a href="#work" class="btn btn-primary-glow">View Our Work →</a>
+                    <a href="https://wa.me/917595977300" class="btn btn-glass-outline">Get Free Demo →</a>
+                </div>
+                
+                <div class="hero-stats-row">
+                    <div class="stat-item-small">
+                        <span class="stat-icon">⭐</span>
+                        <span><strong>5.0</strong> Rating (From 20+ Clients)</span>
+                    </div>
+                    <div class="stat-item-small">
+                        <span class="stat-icon">💼</span>
+                        <span><strong>20+</strong> Projects Completed</span>
+                    </div>
+                    <div class="stat-item-small">
+                        <span class="stat-icon">📈</span>
+                        <span><strong>98%</strong> Client Satisfaction</span>
+                    </div>
+                    <div class="stat-item-small">
+                        <span class="stat-icon">⚡</span>
+                        <span><strong>24hr</strong> Avg. Response Time</span>
+                    </div>
+                </div>
+
+                <div class="hero-trust-logos">
+                    <p class="trust-label">Trusted by businesses across industries</p>
+                    <div class="logos-row">
+                        <span><img src="assets/portfolio/green_nature.png" alt="" class="grayscale-logo">GREENNATURE</span>
+                        <span><img src="assets/portfolio/bcollins.png" alt="" class="grayscale-logo">BCOLLINS</span>
+                        <span><img src="assets/portfolio/pfm_roofing.png" alt="" class="grayscale-logo">PFM ROOFING</span>
+                        <span><img src="assets/portfolio/dubai_plumber.png" alt="" class="grayscale-logo">AQUAIRE</span>
+                        <span><img src="assets/portfolio/secret_society.png" alt="" class="grayscale-logo">SURECARE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side 3D Mockup -->
+            <div class="hero-content-right reveal-up delay-2">
+                <div class="mockup-scene">
+                    <div class="mockup-container" id="parallax-mockup">
+                        <div class="browser-bar">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            <div class="url-bar">greennaturegarden.com</div>
+                        </div>
+                        <img src="assets/portfolio/green_nature.png" alt="Landscaping Website Mockup" class="mockup-img">
+                        
+                        <!-- Floating Glass Cards -->
+                        <div class="glass-card card-top-right float-1" id="parallax-card-1">
+                            <div class="card-header">
+                                <span class="card-title">+42</span>
+                                <span class="card-subtitle">New Leads</span>
+                            </div>
+                            <div class="card-chart">
+                                <svg viewBox="0 0 100 40"><path d="M0 30 L 20 25 L 40 10 L 60 15 L 80 5 L 100 0" stroke="#A855F7" stroke-width="3" fill="none" /></svg>
+                            </div>
+                            <span class="card-subtext">This Month</span>
+                        </div>
+
+                        <div class="glass-card card-left float-2" id="parallax-card-2">
+                            <div class="card-icon-title">Google</div>
+                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                            <div class="card-subtitle">5.0</div>
+                            <span class="card-subtext">20+ Reviews</span>
+                        </div>
+
+                        <div class="glass-card card-bottom-left float-3" id="parallax-card-3">
+                            <div class="card-title">18</div>
+                            <span class="card-icon-right">📅</span>
+                            <div class="card-subtitle">Bookings</div>
+                            <span class="card-subtext">This Month</span>
+                        </div>
+
+                        <div class="glass-card card-bottom-right float-4" id="parallax-card-4">
+                            <div class="card-subtitle">SEO Score</div>
+                            <div class="card-progress">
+                                <svg viewBox="0 0 36 36" class="circular-chart">
+                                    <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle" stroke-dasharray="98, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <div class="percentage">98<span class="small">/100</span></div>
+                            </div>
+                        </div>
+                        
+                        <!-- The glowing base platform -->
+                        <div class="mockup-platform"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

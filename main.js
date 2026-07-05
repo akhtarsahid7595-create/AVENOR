@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== STICKY BUTTONS =====
     const stickyButtons = document.getElementById('stickyButtons');
-    const hero = document.querySelector('.hero');
+    const hero = document.querySelector('.hero-split');
 
     window.addEventListener('scroll', () => {
         if (hero && window.scrollY > hero.offsetHeight * 0.4) {
@@ -118,6 +118,32 @@ document.addEventListener('DOMContentLoaded', () => {
             stickyButtons.classList.remove('visible');
         }
     });
+
+    // ===== 3D HERO PARALLAX =====
+    const heroMockup = document.getElementById('parallax-mockup');
+    const heroCards = [
+        document.getElementById('parallax-card-1'),
+        document.getElementById('parallax-card-2'),
+        document.getElementById('parallax-card-3'),
+        document.getElementById('parallax-card-4')
+    ];
+    if (heroMockup) {
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.pageX) / 40;
+            const y = (window.innerHeight / 2 - e.pageY) / 40;
+            
+            // Subtle rotation for the 3D mockup
+            heroMockup.style.transform = `rotateY(${-15 + x/3}deg) rotateX(${10 - y/3}deg)`;
+            
+            // Subtle translate for floating cards
+            heroCards.forEach((card, index) => {
+                if (card) {
+                    const factor = (index + 1) * 0.5;
+                    card.style.transform = `translateZ(50px) translate(${x * factor}px, ${y * factor}px)`;
+                }
+            });
+        });
+    }
 
     // ===== COUNTER ANIMATION =====
     const counters = document.querySelectorAll('.stat-number');
