@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avenor Blog | Web Design & SaaS Insights</title>
+    <meta name="description" content="Insights, guides, and strategies for global small businesses and Irish local businesses to grow their online presence in 2026.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-header {
+            padding: 180px 0 80px;
+            text-align: center;
+            background: rgba(10, 10, 15, 0.4);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            padding: 80px 0;
+        }
+        .blog-card {
+            background: rgba(20, 20, 30, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(124, 58, 237, 0.5);
+            box-shadow: 0 10px 40px rgba(124, 58, 237, 0.15);
+        }
+        .b-tag {
+            font-size: 12px;
+            font-weight: 600;
+            color: #a78bfa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .b-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.3;
+        }
+        .b-excerpt {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+        .b-read {
+            margin-top: auto;
+            font-size: 14px;
+            font-weight: 600;
+            color: #a78bfa;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Nav -->
+    <nav class="nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-wm"><span class="logo-ave">AVE</span><span class="logo-nor">NOR</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#work">Work</a>
+                <a href="../index.html#process">Process</a>
+                <a href="../index.html#about">About</a>
+                <a href="index.html" class="active" style="color: #a78bfa;">Blog</a>
+                <a href="https://wa.me/917595977300" class="nav-cta">Get Free Demo →</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="blog-header relative">
+        <div class="hero-bg-animated">
+            <div class="radial-glow glow-1"></div>
+            <div class="particles"></div>
+        </div>
+        <div class="container relative z-10">
+            <h1 class="hero-heading">
+                Insights & <span class="gradient-text-purple">Strategies</span>
+            </h1>
+            <p class="hero-sub mx-auto" style="max-width: 600px;">
+                Expert guides on web development, SaaS building, and local SEO to help you scale your business in 2026.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="container">
+        <div class="blog-grid">
+            
+            <a href="small-business-web-design-2026.html" class="blog-card">
+                <span class="b-tag">Web Design</span>
+                <h2 class="b-title">The Ultimate Guide to Small Business Website Design in 2026</h2>
+                <p class="b-excerpt">Why your small business needs more than just a basic template, and how a custom, high-converting website can transform your lead generation.</p>
+                <div class="b-read">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+            <a href="leo-trading-online-voucher-ireland.html" class="blog-card">
+                <span class="b-tag">Local SEO Ireland</span>
+                <h2 class="b-title">How to Get the LEO Trading Online Voucher for Your Irish Business</h2>
+                <p class="b-excerpt">A complete guide for small businesses in Ireland looking to secure the €2,500 government grant to build or upgrade their e-commerce website.</p>
+                <div class="b-read">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+            </a>
+
+        </div>
+    </section>
+
+    <footer class="footer" style="margin-top: 80px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; color: rgba(255,255,255,0.5);">
+        <div class="container">
+            <p>© 2026 Avenor. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
