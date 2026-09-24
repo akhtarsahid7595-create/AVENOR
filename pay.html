@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment | Avenor</title>
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { padding-top: 100px; display: flex; flex-direction: column; min-height: 100vh; }
+        .pay-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+        .pay-card {
+            background: var(--surface);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            border-radius: 16px;
+            padding: 50px 40px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .pay-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, #a78bfa, #7c3aed);
+        }
+        .pay-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(167, 139, 250, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: #a78bfa;
+        }
+        .pay-title {
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        .pay-desc {
+            color: rgba(255,255,255,0.7);
+            font-size: 16px;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.4);
+            font-size: 13px;
+            margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Nav -->
+    <nav class="nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-wm"><span class="logo-ave">AVE</span><span class="logo-nor">NOR</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#work">Work</a>
+                <a href="index.html#process">Process</a>
+                <a href="blog/index.html">Blog</a>
+                <a href="contact.html" class="nav-cta">Get Free Demo →</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="pay-container">
+        <div class="pay-card reveal-up">
+            <div class="pay-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+            </div>
+            <h1 class="pay-title">Secure Payment</h1>
+            <p class="pay-desc">Click the button below to complete your payment securely via PayU. All major credit cards, debit cards, and UPI are accepted.</p>
+            
+            <a href="https://payu.in/pay/D8F26DDD268F089A1153498DB6C9BD5F" class="btn btn-primary btn-full" style="font-size: 18px; padding: 16px;">
+                Proceed to Checkout
+                <span class="btn-arrow">→</span>
+            </a>
+            
+            <div class="secure-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>Payments are 100% secure & encrypted by PayU</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-wm logo-wm-lg"><span class="logo-ave">AVE</span><span class="logo-nor">NOR</span></span>
+                <p>Premium websites for businesses that mean business.</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#work">Work</a>
+                <a href="index.html#process">Process</a>
+                <a href="contact.html">Contact</a>
+                <a href="pay.html" style="color: #a78bfa;">Make a Payment</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Avenor. All rights reserved. | +91 7595977300</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
