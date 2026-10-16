@@ -1167,6 +1167,22 @@ h1, h2, h3 {
   transition: transform 0.8s var(--ease);
 }
 
+/* Live website hero previews in portfolio cards */
+.live-preview-wrap { background: #11131a; }
+.portfolio-grid .portfolio-card:not(.new-portfolio) { display: none; }
+.live-preview { overflow: hidden; position: relative; background: #11131a; }
+.live-preview iframe {
+  position: absolute;
+  inset: 0;
+  width: 200%;
+  height: 200%;
+  border: 0;
+  transform: scale(.5);
+  transform-origin: top left;
+  pointer-events: none;
+  background: #fff;
+}
+
 .portfolio-card:hover .portfolio-image {
   transform: scale(1.06);
 }
